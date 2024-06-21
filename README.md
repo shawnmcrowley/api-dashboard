@@ -30,10 +30,12 @@
 
 ## To Do
 
-5. Include a manifest.json file in this project for PWA Availability and add a Service Worker
-6. Add to GitHub Actions for Auto Build and CI/CD
-7. Add Toasts and Loading Spinner 
-8. Add Error and Loading Pages
+1. Include a manifest.json file in this project for PWA Availability and add a Service Worker
+2. Add to GitHub Actions for Auto Build and CI/CD
+3. Add Toasts and Loading Spinner 
+4. Add Error and Loading Pages
+5. Add Swagger Server for API Docs
+6. Add SSL Certificate
 
 First, run the development server:
 

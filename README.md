@@ -3,12 +3,13 @@
 
 ## Design Goals
 
-1. Connect via API to Adaptive Works api service and acquire current exported data in realtime
-2. Validate the API's provide the same data and valiation as the existing export, just in real time without exports, staging, scripts, loads. etc.
-3. Validate that changes in the data schema within Adaptive Works is available in real time without data manipulation
-4. Store REST API Data in a NoSQL DataStore
-5. Display Data in a UI that can pull from Adaptive Works/NoSQL Data Store/Compare the Two
+1. Connect via API to Adaptive Works api service and acquire current exported data in realtime (Done)
+2. Validate the API's provide the same data and valiation as the existing export, just in real time without exports, staging, scripts, loads. etc. (done)
+3. Validate that changes in the data schema within Adaptive Works is available in real time without data manipulation (In Process)
+4. Store REST API Data in a NoSQL DataStore (Done)
+5. Display Data in a UI that can pull from Adaptive Works/NoSQL Data Store/Compare the Two (In Process)
 6. Make Next JS UI PWA so it can be downloaded or used easily via mobile
+7. Use Next JS as it's the recommendation for the Digital Business Platform... same technologies
 
 ## Process Goals
 
@@ -16,19 +17,19 @@
 2. Version Control
 3. Documentation
 4. API First Design
+5. Swagger Docs
+6. Comprehensive Logging
+7. Application Integration Only thru API
 5. Containerization
 
 ## Next Steps
 
 1. Testing Power BI ability to query API's Directly or NoSQL Directly for it's reporting needs
 2. Evaluate API push directly to a SnowFlake Warehouse for Power BI reporting and remove NoSQL
+3. Evaluate API vs. AirByte OpenSource
 
 ## To Do
 
-1. <strike>Fix FS Tab Images</strike>
-2. <strike>Add Header and Footer and make page specific layout</strike>
-3. <strike>Create DockerFile for Application Build and Automation</strike>
-4. <strike>Fix Transition Screen Glitch (This is possibly related to Google Fonts download)</strike> - This was corrected once a build was performed and Server was run in Production Mode
 5. Include a manifest.json file in this project for PWA Availability and add a Service Worker
 6. Add to GitHub Actions for Auto Build and CI/CD
 7. Add Toasts and Loading Spinner 

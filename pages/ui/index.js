@@ -1,8 +1,8 @@
 
 import React from "react"
 import Navigation from "../components/navigation"
-import DataTable from "@/components/DataTable"
 import styles from "../styles/styles.module.css"
+import Image from "next/image";
 
 
 const HomePage = () => {
@@ -12,7 +12,16 @@ const HomePage = () => {
 <>
     <div className={styles.container}>
     <div className={styles.header}>
-      <h3>API Landing Page</h3>
+    <h3>
+    <Image
+          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
+          src="/LycraLogo.jpg"
+          alt="The Lycra Company Logo"
+          width={50}
+          height={50}
+          priority
+        />
+      API Landing Page</h3>
       <Navigation/>
     </div>
     <div className={styles.sidebar}>

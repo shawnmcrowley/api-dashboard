@@ -4,7 +4,7 @@
 ## Design Goals
 
 1. Connect via API to Adaptive Works api service and acquire current exported data in realtime (Done)
-2. Validate the API's provide the same data and valiation as the existing export, just in real time without exports, staging, scripts, loads. etc. (done)
+2. Validate the API's provide the same data and valiation as the existing export, just in real time without exports, staging, scripts, loads. etc. (Done)
 3. Validate that changes in the data schema within Adaptive Works is available in real time without data manipulation (In Process)
 4. Store REST API Data in a NoSQL DataStore (Done)
 5. Display Data in a UI that can pull from Adaptive Works/NoSQL Data Store/Compare the Two (In Process)

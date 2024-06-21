@@ -7,19 +7,19 @@
     }
     .header {
       grid-column: 1 / -1;
-      background-color: #ddd;
+      background-color: white;
       padding: 20px;
       text-align: left;
       font-size: 1.5em;
       border-radius: 25px;
     }
     .sidebar {
-      background-color: #ddd;
+      background-color: whitesmoke;
       padding: 20px;
       border-radius: 25px;
     }
     .content {
-      background-color: #ddd;
+      background-color: whitesmoke;
       padding: 20px;
       border-radius: 25px;
     }

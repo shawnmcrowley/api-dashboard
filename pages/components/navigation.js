@@ -65,8 +65,7 @@ const htmlFile = `
     <a href="/api/mongodb">Database Service API</a>
     <a href="/api/sync">Sync DataSources</a>
     <a href="#">Snowflake Service</a>
-    <a href="../api_docs.html">Docs</a>
-  </div>
+    </div>
 
   
     <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>

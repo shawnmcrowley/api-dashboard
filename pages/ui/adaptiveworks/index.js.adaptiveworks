@@ -1,0 +1,84 @@
+import React from "react"
+
+
+import {
+    Table,
+    TableBody,
+    TableCaption,
+    TableCell,
+    TableFooter,
+    TableHead,
+    TableHeader,
+    TableRow,
+  } from "@/components/ui/table"
+  
+
+
+  export default function AdaptiveWorks_Landing({allEntities}) {
+    console.info(allEntities)
+    return (
+      <Table>
+        <TableCaption>MileStone's from Adaptive Works</TableCaption>
+        <TableHeader>
+          <TableRow>
+            <TableHead className="w-[100px]"></TableHead>
+            <TableHead>Identifier</TableHead>
+            <TableHead>Name</TableHead>
+            <TableHead>CreatedOn</TableHead>
+            <TableHead className="text-right">DueDate</TableHead>
+            <TableHead>Percentage Completed %</TableHead>
+          </TableRow>
+        </TableHeader>
+        <TableBody>
+          {allEntities.map((data) => (
+            <TableRow key={data.SYSID}>
+              <TableCell className="font-medium">{data.SYSID}</TableCell>
+              <TableCell>{data.Name}</TableCell>
+              <TableCell>{data.CreatedOn}</TableCell>
+              <TableCell className="text-right">{data.DueDate}</TableCell>
+              <TableCell>{data.PercentCompleted}</TableCell>
+            </TableRow>
+          ))}
+        </TableBody>
+        <TableFooter>
+          <TableRow>
+            <TableCell colSpan={3}>Showing Rows: 50 </TableCell>
+          </TableRow>
+        </TableFooter>
+      </Table>
+    )
+  }
+  
+
+
+  export async function getStaticProps() {
+    try {
+        const response = await fetch("http://localhost:3000/api/adaptiveworks/", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            }
+        });
+
+        // Check if the response status is OK (status code 200-299)
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+
+        // Parse the JSON
+        const data = await response.json();
+        console.log(data);
+
+        return {
+            props: { allEntities: data.entities || [] }
+        };
+    } catch (error) {
+        console.error('Error fetching data:', error);
+
+        // Return empty props or handle the error as needed
+        return {
+            props: { allEntities: [] }
+        };
+    }
+}
+

@@ -64,7 +64,8 @@ const htmlFile = `
     <a href="../ui/mongodb">Database Service UI</a>
     <a href="/api/mongodb">Database Service API</a>
     <a href="/api/sync">Sync DataSources</a>
-    <a href="#">Snowflake Service</a>
+    <a href="../ui/snowflake">Snowflake Service UI</a>
+    <a href="/">Dashboard</a>
     </div>
 
   

@@ -15,16 +15,18 @@
 
 1. Demonstrate a Design and Code First Agile Process
 2. Version Control
-3. Documentation (add Swagger Details and Docs with Backend Server)
+3. Documentation
 4. API First Design
-5. Comprehensive Logging
+5. Swagger Docs
+6. Comprehensive Logging
 7. Application Integration Only thru API
 5. Containerization
 
 ## Next Steps
 
-1. Testing Power BI ability to query API's Directly or NoSQL Directly for it's reporting needs (Updated - Use Airbyte to integrate NoSQL and Snowflake)
-2. Evaluate API vs. AirByte OpenSource
+1. Testing Power BI ability to query API's Directly or NoSQL Directly for it's reporting needs
+2. Evaluate API push directly to a SnowFlake Warehouse for Power BI reporting and remove NoSQL
+3. Evaluate API vs. AirByte OpenSource
 
 ## To Do
 

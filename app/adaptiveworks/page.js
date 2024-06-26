@@ -73,10 +73,8 @@ export default function Page() {
         </Card>
       </TabsContent>
       <TabsContent value="Sync_Snowflake">
-       
       </TabsContent>
-      
-    </Tabs>
+     </Tabs>
     
   )
 }

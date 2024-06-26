@@ -88,7 +88,7 @@ export default function Page() {
     return (
         <div className="ag-theme-quartz" style={{ height: 700 }}>Data Grid with Nested Objects
             <p></p>
-            <AgGridReact rowData={rowData} columnDefs={colDefs} defaultColDef={defaultColDef} />
+            <AgGridReact rowData={rowData} columnDefs={colDefs} defaultColDef={defaultColDef} pagination={true} paginationPageSize={25} paginationPageSizeSelector={[25,50]}/>
         </div>
     )
 

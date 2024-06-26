@@ -11,12 +11,12 @@ export default function HomePage () {
 
   return (
     
-    <div className={styles.container}>
+  <div className={styles.container}>
     <div className={styles.header}>
-    <Header/>
-    <Navigation/>
-    </div>
-    <div className={styles.sidebar}>
+          <Header/>
+          <Navigation/>
+          </div>
+        <div className={styles.sidebar}>
       <SideBar/>
     </div>
     <div className={styles.content}>

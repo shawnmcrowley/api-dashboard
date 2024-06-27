@@ -1,80 +1,106 @@
+'use client'
+import Navigation from '../../components/navigation'
+//import styles from '../../styles/styles.module.css'
+//import Header from '@/pages/components/header'
+import SideBar from '@/components/sidebar'
+import { AgGridReact } from "ag-grid-react"
+import "ag-grid-community/styles/ag-grid.css"
+import "ag-grid-community/styles/ag-theme-quartz.css"
+import { useMemo, useState, useEffect } from "react"
 
 
-import { Button } from "@/components/ui/button"
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import {
-  Tabs,
-  TabsContent,
-  TabsList,
-  TabsTrigger,
-} from "@/components/ui/tabs"
 
 export default function Page() {
+
+  const defaultColDef = useMemo(() => {
+    return {
+      flex: 1,
+      filter: true,
+      floatingFilter: false,
+      filterParams: { buttons: ['apply', 'clear'] }
+    }
+
+  })
+
+
+
+  // Row Data to Display
+  const [rowData, setRowData] = useState([])
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch("../api/adaptiveworks/", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          }
+        });
+
+        // Check if the response status is OK (status code 200-299)
+        if (!response.ok) {
+          throw new Error(`HTTP Error! Status: ${response.status}`);
+        }
+
+        // Parse the JSON
+        const data = await response.json();
+        console.log(data);
+        setRowData(data.entities);
+
+      } catch (error) {
+        console.error('Error Fetching Data:', error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+
+
+
+
+
+
+  // Column Definitions for Headers
+  const [colDefs, setColDefs] = useState([
+    {
+      field: "SYSID",
+      headerName: "Milestone ID"
+    },
+    {
+      field: 'Name',
+      headerName: "Name"
+    },
+    {
+      field: "CreatedOn",
+      headerName: "Created On",
+      filter: 'agDateColumnFilter'
+    },
+    {
+      field: "DueDate",
+      headerName: "Due Date",
+      filter: 'agDateColumnFilter'
+    },
+    {
+      field: "PercentCompleted",
+      headerName: "% Complete",
+    }
+  ])
+
+
+
+
+
   return (
-        <Tabs defaultValue="Sync_Adaptiveworks" className="w-[800px]">
-      <TabsList className="grid w-full grid-cols-3">
-        <TabsTrigger value="Sync_Adaptiveworks">Sync with AdaptiveWorks</TabsTrigger>
-        <TabsTrigger value="Sync_MongoDB">Sync with Staging</TabsTrigger>
-        <TabsTrigger value="Sync_Snowflake">Sync with Snowflake</TabsTrigger>
-      </TabsList>
-      <TabsContent value="Sync_Adaptiveworks">
-        <Card>
-          <CardHeader>
-            <CardTitle>Account</CardTitle>
-            <CardDescription>
-              Make changes to your account here. Click save when you're done.
-            </CardDescription>
-          </CardHeader>
-          <CardContent className="space-y-2">
-            <div className="space-y-1">
-              <Label htmlFor="name">Name</Label>
-              <Input id="name" defaultValue="Pedro Duarte" />
-            </div>
-            <div className="space-y-1">
-              <Label htmlFor="username">Username</Label>
-              <Input id="username" defaultValue="@peduarte" />
-            </div>
-          </CardContent>
-          <CardFooter>
-            <Button>Save changes</Button>
-          </CardFooter>
-        </Card>
-      </TabsContent>
-      <TabsContent value="Sync_MongoDB">
-        <Card>
-          <CardHeader>
-            <CardTitle>Password</CardTitle>
-            <CardDescription>
-              Change your password here. After saving, you'll be logged out.
-            </CardDescription>
-          </CardHeader>
-          <CardContent className="space-y-2">
-            <div className="space-y-1">
-              <Label htmlFor="current">Current password</Label>
-              <Input id="current" type="password" />
-            </div>
-            <div className="space-y-1">
-              <Label htmlFor="new">New password</Label>
-              <Input id="new" type="password" />
-            </div>
-          </CardContent>
-          <CardFooter>
-            <Button>Save password</Button>
-          </CardFooter>
-        </Card>
-      </TabsContent>
-      <TabsContent value="Sync_Snowflake">
-      </TabsContent>
-     </Tabs>
-    
-  )
+    <>
+      <div className="ag-theme-quartz" style={{ height: 700 }}>
+        <h3>API Landing Page</h3>
+        <Navigation />
+         <SideBar />
+          <h3>Adaptive Works Milestones</h3>
+        <AgGridReact rowData={rowData} columnDefs={colDefs} defaultColDef={defaultColDef} pagination={true} paginationPageSize={25} paginationPageSizeSelector={[25, 50]} />
+      </div>
+    </>
+)
+
 }

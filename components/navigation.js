@@ -6,7 +6,7 @@ const htmlFile = `
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     body {
-      font-family: "Lato", sans-serif;
+      font-family: "latin", sans-serif;
     }
 
     .sidenav {
@@ -59,17 +59,17 @@ const htmlFile = `
 
   <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <a href="../ui/adaptiveworks">Adaptive Works UI</a>
-    <a href="/api/adaptiveworks">Adaptive Works API</a>
-    <a href="../ui/mongodb">Database Service UI</a>
-    <a href="/api/mongodb">Database Service API</a>
-    <a href="/api/sync">Sync DataSources</a>
-    <a href="../ui/snowflake">Snowflake Service UI</a>
+    <a href="../adaptiveworks">Adaptive Works UI</a>
+    <a href="../api/adaptiveworks">Adaptive Works API</a>
+    <a href="../mongodb">Database Service UI</a>
+    <a href="../api/mongodb">Database Service API</a>
+    <a href="../api/sync">Sync DataSources</a>
+    <a href="../snowflake">Snowflake Service UI</a>
     <a href="/">Dashboard</a>
     </div>
 
   
-    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
 
   <script>
     function openNav() {

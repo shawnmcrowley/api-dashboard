@@ -8,25 +8,19 @@ export default function Header() {
 
   return (
 
-    <Card className="w-[1000px]">
+    <Card>
       <CardHeader>
-        <CardTitle>
-        <Navigation/>
+        <CardTitle>        
           <Image
-            className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
             src="/LycraLogo.jpg"
             alt="The Lycra Company Logo"
             width={80}
             height={80}
-            priority
-          />API Landing Page
+            />API Landing Page
         </CardTitle>
-        <CardDescription></CardDescription>
+        <CardDescription> UI used to provide access for various API Integrations, including the raw payloads, OpenAPI documents for each API, and synchronization of datasources via api</CardDescription>
       </CardHeader>
-      <CardContent>
-        UI used to provide access for various API Integrations, including the raw payloads, OpenAPI documents for each API, and synchronization of datasources via api
-      </CardContent>
-      <CardFooter></CardFooter>
+      <CardFooter><Navigation/></CardFooter>
       </Card>
   )
 }

@@ -3,20 +3,22 @@
     .container {
       display: grid;
       grid-template-columns: 30% 70%;
-      gap: 10px;
+      gap: 1px;
+      background-color: whitesmoke;
     }
     .header {
       grid-column: 1 / -1;
+      padding: 10px;
      
     }
     .sidebar {
-      background-color: white;
-      padding: 20px;
+      background-color: whitesmoke;
+      padding: 10px;
     }
       
     .content {
-      background-color: white;
-      padding: 20px;
+      background-color: whitesmoke;
+      padding: 10px;
       
     }
     .table {

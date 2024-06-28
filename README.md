@@ -24,7 +24,7 @@
 ## Next Steps
 
 1. Testing Power BI ability to query API's Directly or NoSQL Directly for it's reporting needs (Updated - Use Airbyte to integrate NoSQL and Snowflake)
-2. Evaluate API vs. AirByte OpenSource
+2. Evaluate API vs. AirByte OpenSource for Synchronization in SnowFlake
 
 ## To Do
 
@@ -34,6 +34,7 @@
 4. Add Error and Loading Pages
 5. Add Swagger Server for API Docs
 6. Add SSL Certificate
+7. Fix Layouts and column interface
 
 First, run the development server:
 

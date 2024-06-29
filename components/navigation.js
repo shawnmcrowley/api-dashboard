@@ -16,7 +16,7 @@ const htmlFile = `
       z-index: 1;
       top: 0;
       left: 0;
-      background-color: #111;
+      background-color: #1F2937;
       overflow-x: hidden;
       transition: 0.5s;
       padding-top: 60px;
@@ -59,12 +59,10 @@ const htmlFile = `
 
   <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <a href="../adaptiveworks">Adaptive Works UI</a>
     <a href="../api/adaptiveworks">Adaptive Works API</a>
-    <a href="../mongodb">Database Service UI</a>
     <a href="../api/mongodb">Database Service API</a>
+    <a href="../api/snowflake">Snowflake Service API</a>
     <a href="../api/sync">Sync DataSources</a>
-    <a href="../snowflake">Snowflake Service UI</a>
     <a href="/">Dashboard</a>
     </div>
 

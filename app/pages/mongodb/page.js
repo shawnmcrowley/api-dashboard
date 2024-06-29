@@ -25,7 +25,7 @@ export default function Page() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("../api/mongodb/")
+        const response = await fetch("../api/mongodb")
         // Check if the response status is OK (status code 200-299)
         if (!response.ok) {
           throw new Error(`HTTP Error! Status: ${response.status}`);
@@ -33,8 +33,8 @@ export default function Page() {
 
         // Parse the JSON
         const data = await response.json();
-        console.log(data);
-        setRowData(data);
+        console.log(data[0].entities);
+        setRowData(data[0].entities);
 
       } catch (error) {
         console.error('Error Fetching Data:', error);
@@ -43,10 +43,6 @@ export default function Page() {
 
     fetchData();
   }, []);
-
-
-
-
 
 
 

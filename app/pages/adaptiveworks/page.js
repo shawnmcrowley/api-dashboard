@@ -1,12 +1,10 @@
 'use client'
-import Navigation from '../../components/navigation'
-//import styles from '../../styles/styles.module.css'
-//import Header from '@/pages/components/header'
-import SideBar from '@/components/sidebar'
+
 import { AgGridReact } from "ag-grid-react"
 import "ag-grid-community/styles/ag-grid.css"
 import "ag-grid-community/styles/ag-theme-quartz.css"
 import { useMemo, useState, useEffect } from "react"
+import Layout from '../../../components/layout'
 
 
 
@@ -92,15 +90,12 @@ export default function Page() {
 
 
   return (
-    <>
+    <Layout>
+      <h1>Adaptive Works Milestones</h1>
       <div className="ag-theme-quartz" style={{ height: 700 }}>
-        <h3>API Landing Page</h3>
-        <Navigation />
-         <SideBar />
-          <h3>Adaptive Works Milestones</h3>
-        <AgGridReact rowData={rowData} columnDefs={colDefs} defaultColDef={defaultColDef} pagination={true} paginationPageSize={25} paginationPageSizeSelector={[25, 50]} />
+          <AgGridReact rowData={rowData} columnDefs={colDefs} defaultColDef={defaultColDef} pagination={true} paginationPageSize={25} paginationPageSizeSelector={[25, 50]} />
       </div>
-    </>
+    </Layout>
 )
 
 }

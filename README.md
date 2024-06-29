@@ -7,7 +7,7 @@
 2. Validate the API's provide the same data and valiation as the existing export, just in real time without exports, staging, scripts, loads. etc. (Done)
 3. Validate that changes in the data schema within Adaptive Works is available in real time without data manipulation (In Process)
 4. Store REST API Data in a NoSQL DataStore (Done)
-5. Display Data in a UI that can pull from Adaptive Works/NoSQL Data Store/Compare the Two (In Process)
+5. Display Data in a UI that can pull from Adaptive Works/NoSQL Data Store/Compare the Two (Done)
 6. Make Next JS UI PWA so it can be downloaded or used easily via mobile
 7. Use Next JS as it's the recommendation for the Digital Business Platform... same technologies
 
@@ -17,7 +17,7 @@
 2. Version Control
 3. Documentation (add Swagger Details and Docs with Backend Server)
 4. API First Design
-5. Comprehensive Logging
+5. Comprehensive Logging (Done - Both in Console and Logs)
 7. Application Integration Only thru API
 5. Containerization
 
@@ -34,7 +34,7 @@
 4. Add Error and Loading Pages
 5. Add Swagger Server for API Docs
 6. Add SSL Certificate
-7. Fix Layouts and column interface
+7. Fix Layouts and column interface (Done - Navigation and Data Grid)
 
 First, run the development server:
 

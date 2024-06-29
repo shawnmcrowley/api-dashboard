@@ -35,6 +35,7 @@
 5. Add Swagger Server for API Docs
 6. Add SSL Certificate
 7. Fix Layouts and column interface (Done - Navigation and Data Grid)
+8. Need to clean up extra files, layouts, and components
 
 First, run the development server:
 

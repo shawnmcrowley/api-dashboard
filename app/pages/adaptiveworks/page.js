@@ -3,8 +3,9 @@
 import { AgGridReact } from "ag-grid-react"
 import "ag-grid-community/styles/ag-grid.css"
 import "ag-grid-community/styles/ag-theme-quartz.css"
-import { useMemo, useState, useEffect } from "react"
+import { useMemo, useState, useEffect, Suspense } from "react"
 import Layout from '../../../components/layout'
+
 
 
 
@@ -91,10 +92,12 @@ export default function Page() {
 
   return (
     <Layout>
+      
       <h1>Adaptive Works Milestones</h1>
-      <div className="ag-theme-quartz" style={{ height: 700 }}>
+      <div className="ag-theme-quartz" style={{ height: '650px' }}>
           <AgGridReact rowData={rowData} columnDefs={colDefs} defaultColDef={defaultColDef} pagination={true} paginationPageSize={25} paginationPageSizeSelector={[25, 50]} />
       </div>
+      
     </Layout>
 )
 

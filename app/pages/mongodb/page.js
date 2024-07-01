@@ -5,6 +5,7 @@ import "ag-grid-community/styles/ag-theme-quartz.css"
 import { useMemo, useState, useEffect } from "react"
 import Layout from '../../../components/layout'
 
+
 export default function Page() {
 
   const defaultColDef = useMemo(() => {
@@ -80,10 +81,12 @@ export default function Page() {
 
 
     <Layout>
+      
       <h1>NoSQL DataStore</h1>
-      <div className="ag-theme-quartz" style={{height: '700px'}}>
+      <div className="ag-theme-quartz" style={{height: '650px'}}>
          <AgGridReact rowData={rowData} columnDefs={colDefs} defaultColDef={defaultColDef} pagination={true} paginationPageSize={25} paginationPageSizeSelector={[25, 50]} />
       </div>
+      
     </Layout>
 
   )

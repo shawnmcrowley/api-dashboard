@@ -34,7 +34,7 @@ const Layout = ({ children }) => {
         <aside className="w-1/5 p-4 bg-gray-100">
           <Card>
             <CardContent>
-              <Navigation />
+              <Navigation /> 
             </CardContent>
           </Card>
         </aside>
